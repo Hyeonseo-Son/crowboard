@@ -28,4 +28,4 @@ catch(err) {
 }
 
 oled.setCursor(0,10);
-oled.writeString(font, 1, 'Start nCube', 1, false);
+oled.writeString(font, 1, 'Test Crow Board', 1, false);
