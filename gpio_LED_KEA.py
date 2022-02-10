@@ -7,12 +7,12 @@ pin3 = 436
 
 
 def led_on(pin):
-    GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, True)
 
 def led_off(pin):
-    GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
     GPIO.cleanup(pin)
 
