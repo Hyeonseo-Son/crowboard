@@ -1,9 +1,9 @@
 import Jetson.GPIO as GPIO
 import time
 
-pin1 = 1
-pin2 = 7
-pin3 = 9
+pin1 = 29
+pin2 = 32
+pin3 = 7
 
 
 def led_on(pin):
