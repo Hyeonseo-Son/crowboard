@@ -1,4 +1,4 @@
-import Jetson.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 pin1 = 1
