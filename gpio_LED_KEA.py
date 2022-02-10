@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 
-pin1 = 1
-pin2 = 7
-pin3 = 9
+pin1 = 133
+pin2 = 136
+pin3 = 148
 
 
 def led_on(pin):
