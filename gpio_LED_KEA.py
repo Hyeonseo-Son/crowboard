@@ -5,13 +5,13 @@ pin1 = 1
 pin2 = 7
 pin3 = 9
 
+GPIO.setmode(GPIO.BOARD)
+
 def led_on(pin):
-    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, True)
 
 def led_off(pin):
-    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
     GPIO.cleanup(pin)
 
