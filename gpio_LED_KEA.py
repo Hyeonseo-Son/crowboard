@@ -8,13 +8,11 @@ pin3 = 9
 def led_on(pin):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
-
     GPIO.output(pin, True)
 
 def led_off(pin):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
-
     GPIO.cleanup(pin)
 
 led_on(pin1)
