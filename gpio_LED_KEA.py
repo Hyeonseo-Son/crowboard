@@ -1,9 +1,9 @@
-import RPi.GPIO as GPIO
+import Jetson.GPIO as GPIO
 import time
 
-pin1 = 421
-pin2 = 424
-pin3 = 436
+pin1 = 1
+pin2 = 7
+pin3 = 9
 
 
 
