@@ -4,12 +4,17 @@ var pushButton = new Gpio(19, 'in', 'both'); //use GPIO pin 19 as input, and 'bo
 
 
 pushButton.watch(function (err, value) { //Watch for hardware interrupts on pushButton GPIO, specify callback function
-  if (err) { //if an error
-    console.error('There was an error', err); //output error message to console
-  return;
-  }
-  console.log("button: ",pushButton.readSync());
-  LED.writeSync(value); //turn LED on or off depending on the button state (0 or 1)
+    if (err) { //if an error
+        console.error('There was an error', err); //output error message to console
+        return;
+    }
+    console.log("button: ",pushButton.readSync());
+    if (pushButton.readSync() === 0) { //check the pin state, if the state is 0 (or off)
+        LED.writeSync(0); //set pin state to 1 (turn LED on)
+    }
+    else {
+        LED.writeSync(1); //set pin state to 0 (turn LED off)
+    }
 });
 
 function unexportOnClose() { //function to run when exiting program
