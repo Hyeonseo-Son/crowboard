@@ -9,7 +9,7 @@ pushButton.watch(function (err, value) { //Watch for hardware interrupts on push
         return;
     }
     console.log("button: ",pushButton.readSync());
-    if (pushButton.readSync() === 0) { //check the pin state, if the state is 0 (or off)
+    if (pushButton.readSync() == 0) { //check the pin state, if the state is 0 (or off)
         LED.writeSync(0); //set pin state to 1 (turn LED on)
     }
     else {
