@@ -1,22 +1,4 @@
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-var Led = new Gpio(20, 'out'); 
-var Button = new Gpio(19, 'in'); 
-
-function ledControl() {
-
-    if (Button.readSync() === 0) {
-        LED.writeSync(1); //set pin state to 1 (turn LED on)
-    }
-    else {
-        LED.writeSync(0); //set pin state to 0 (turn LED off)
-    }
-}
-
-
-ledControl()
-
-
-var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
 var LED = new Gpio(20, 'out'); //use GPIO pin 20 as output
 var pushButton = new Gpio(19, 'in', 'both'); //use GPIO pin 19 as input, and 'both' button presses, and releases should be handled
 
